@@ -91,6 +91,27 @@ The two ambiguous dates are the behaviour I want: guessing between 3 October and
 
 ![Sheet log](media/sheet-log.png)
 
+## The live run
+
+On 6 November 2026 I pointed it at a real Google Drive: an `AI Filer` folder shared with a service account as Editor, an `Inbox` inside it, and a blank Google Sheet for the log. Five files were uploaded to the Inbox through the Drive web page: the Brightwater PDF, the Oakfield Excel, the Harborline Word file, the taxi receipt photo, and a second copy of the Brightwater PDF under the name `scan_0012.pdf`.
+
+| Step | What Google actually did |
+| --- | --- |
+| `check` | Showed the service account, the root folder name, the Inbox, and a `Log` tab created in the Sheet |
+| `scan` | Listed the 5 files, no model calls |
+| `file --dry-run` | Planned all 5, changed nothing |
+| `file` | 3 filed and renamed into `Invoices/2026/10`, 1 to `Duplicates` (same content, no model call), 1 to `Unsorted` (the photo, date `03/11/2026` ambiguous); the folders were created by the tool; 5 rows in the Sheet |
+| `file` again | "nothing in the Inbox", no model spend |
+| `find "invoices from Brightwater in October"` | 1 match, with the Drive link |
+| `undo` | All 5 files back in the Inbox with their original names |
+| `file --include-undone` | Same result as the first run |
+
+Two runs cost about $0.03 each in Claude. No delete request was sent. The one difference from the fake: which of the two identical Brightwater files counts as the original depends on the order Drive lists them, so the other goes to `Duplicates`; either way exactly one copy is filed.
+
+![Drive after filing](media/live-drive-folders.jpg)
+
+![Live Sheet log](media/live-sheet-log.jpg)
+
 ## The fake Google Drive
 
 `drive_filer/fake_google.py` answers the same URLs as Drive API v3 and Sheets API v4 with the same JSON and the same error bodies, for what this tool uses. It enforces the rules that catch people out on the real thing:
@@ -135,7 +156,7 @@ The tests run the whole flow against the fake Drive and Sheets with a scripted C
 ## Status
 
 - **Tested:** the full flow with real Claude on real sample files, against a faithful fake of the Drive and Sheets APIs (above), plus 110 automated tests.
-- **Not yet tested live:** a real Google Drive and Google Sheet. The live test is waiting on a Google Cloud service account; the plan is to drop five sample files into a real Inbox and check the renames, folders, Sheet rows, duplicates and undo in the Drive web app. This README will be updated with that run.
+- **Tested live, 6 November 2026:** a real Google Drive and Google Sheet, with a real service account and real Claude (Sonnet 5.5). See [the live run](#the-live-run).
 - **Not built:** shared drives have only been modelled lightly (the calls send `supportsAllDrives`), push notifications (`changes.watch` webhooks; polling the changes feed is used instead), and moving files between different owners' Drives.
 
 ## Tech
