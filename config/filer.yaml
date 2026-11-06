@@ -1,0 +1,27 @@
+# Where each kind of document is filed, under the root folder shared with the service account.
+# {yyyy} and {mm} come from the document's own date (not the upload date).
+folders:
+  invoice: "Invoices/{yyyy}/{mm}"
+  receipt: "Receipts/{yyyy}/{mm}"
+  contract: "Contracts/{yyyy}"
+  bank_statement: "Bank Statements/{yyyy}"
+  other: "Other/{yyyy}"
+
+# Anything the filer is not sure about goes here with its original name, for a person to look at.
+unsorted: "Unsorted"
+# A second copy of a file already filed (same content hash) goes here. Nothing is ever deleted.
+duplicates: "Duplicates"
+
+# A field must be at least this confident to be used in a folder path or a file name.
+min_confidence: medium
+
+# Fields that must be confident before a document of that type is renamed and filed.
+required:
+  invoice: [doc_date, counterparty, amount, currency]
+  receipt: [doc_date, counterparty, amount, currency]
+  contract: [doc_date, counterparty]
+  bank_statement: [doc_date, counterparty]
+  other: [doc_date]
+
+# Stop the run (leaving the rest in the Inbox) before model spend would pass this, in US dollars.
+cost_cap_usd: 0.50

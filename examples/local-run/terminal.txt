@@ -1,0 +1,100 @@
+$ drive-filer scan
+IMG_4471.png                             new
+brightwater_invoice.pdf                  new
+harborline_print_invoice.docx            new
+kestrel_invoice_scanned.pdf              new
+oakfield_invoice.xlsx                    new
+old_backup.zip                           new
+scan_0012.pdf                            new
+summit_it_invoice.pdf                    new
+Northwind agreement                      new
+
+$ drive-filer file
+  made folder Unsorted
+- IMG_4471.png: unsorted -> Unsorted/IMG_4471.png  (doc_date: low confidence)
+  made folder Invoices
+  made folder Invoices/2026
+  made folder Invoices/2026/10
+- brightwater_invoice.pdf: filed -> Invoices/2026/10/2026-10-14 Brightwater Office Supplies invoice 627.00 GBP.pdf
+- harborline_print_invoice.docx: filed -> Invoices/2026/10/2026-10-30 Harborline Print & Sign invoice 539.28 USD.docx
+- kestrel_invoice_scanned.pdf: unsorted -> Unsorted/kestrel_invoice_scanned.pdf  (doc_date: low confidence)
+- oakfield_invoice.xlsx: filed -> Invoices/2026/10/2026-10-21 Oakfield Catering invoice 453.60 GBP.xlsx
+- old_backup.zip: unsorted -> Unsorted/old_backup.zip  (file type .zip is not read)
+  made folder Duplicates
+- scan_0012.pdf: duplicate -> Duplicates/scan_0012.pdf  (same content as 2026-10-14 Brightwater Office Supplies invoice 627.00 GBP.pdf (f0005))
+- summit_it_invoice.pdf: filed -> Invoices/2026/10/2026-10-28 Summit Ridge IT Services invoice 1930.53 USD.pdf
+  made folder Contracts
+  made folder Contracts/2026
+- Northwind agreement: filed -> Contracts/2026/2026-09-01 Northwind Data Services contract
+
+Run 20261106-112740-83ffd7: duplicate 1, filed 5, unsorted 3
+Model spend $0.0542 for 7 Claude calls
+
+Drive folder after the run:
+AI Filer/
+    Contracts/
+        2026/
+            2026-09-01 Northwind Data Services contract
+    Duplicates/
+        scan_0012.pdf
+    Inbox/
+    Invoices/
+        2026/
+            10/
+                2026-10-14 Brightwater Office Supplies invoice 627.00 GBP.pdf
+                2026-10-21 Oakfield Catering invoice 453.60 GBP.xlsx
+                2026-10-28 Summit Ridge IT Services invoice 1930.53 USD.pdf
+                2026-10-30 Harborline Print & Sign invoice 539.28 USD.docx
+    Unsorted/
+        IMG_4471.png
+        kestrel_invoice_scanned.pdf
+        old_backup.zip
+
+$ drive-filer file   (run again)
+Run 20261106-112758-2f4d0e: nothing in the Inbox
+
+$ drive-filer find "invoices from Brightwater in October"
+  2026-10-14 Brightwater Office Supplies invoice 627.00 GBP.pdf
+1 match(es)
+
+$ drive-filer find "receipts in November"
+  IMG_4471.png  [unsorted: needs a look]
+1 match(es)
+
+$ drive-filer find "invoices over 1000"
+  kestrel_invoice_scanned.pdf  [unsorted: needs a look]
+  2026-10-28 Summit Ridge IT Services invoice 1930.53 USD.pdf
+2 match(es)
+
+$ drive-filer undo
+2026-09-01 Northwind Data Services contract: back to Northwind agreement
+2026-10-28 Summit Ridge IT Services invoice 1930.53 USD.pdf: back to summit_it_invoice.pdf
+scan_0012.pdf: back to scan_0012.pdf
+old_backup.zip: back to old_backup.zip
+2026-10-21 Oakfield Catering invoice 453.60 GBP.xlsx: back to oakfield_invoice.xlsx
+kestrel_invoice_scanned.pdf: back to kestrel_invoice_scanned.pdf
+2026-10-30 Harborline Print & Sign invoice 539.28 USD.docx: back to harborline_print_invoice.docx
+2026-10-14 Brightwater Office Supplies invoice 627.00 GBP.pdf: back to brightwater_invoice.pdf
+IMG_4471.png: back to IMG_4471.png
+
+Drive folder after undo:
+AI Filer/
+    Contracts/
+        2026/
+    Duplicates/
+    Inbox/
+        IMG_4471.png
+        Northwind agreement
+        brightwater_invoice.pdf
+        harborline_print_invoice.docx
+        kestrel_invoice_scanned.pdf
+        oakfield_invoice.xlsx
+        old_backup.zip
+        scan_0012.pdf
+        summit_it_invoice.pdf
+    Invoices/
+        2026/
+            10/
+    Unsorted/
+
+DELETE requests sent to Drive in the whole session: 0

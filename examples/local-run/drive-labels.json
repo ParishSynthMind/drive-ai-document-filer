@@ -1,0 +1,144 @@
+{
+  "IMG_4471.png": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "unsorted",
+      "run_id": "20261106-112740-83ffd7",
+      "content_hash": "md5:72f580d6b9d72e0a145905e7ee6a9444",
+      "doc_type": "receipt",
+      "doc_date": "2026-11-03",
+      "period": "2026-11",
+      "year": "2026",
+      "counterparty": "cityline taxis",
+      "amount": "86.50",
+      "currency": "AED",
+      "reference": "CT-554120",
+      "confidence": "low"
+    },
+    "description": "Unsorted by drive-ai-document-filer on 2026-11-06. Original name: IMG_4471.png\ndoc_type: receipt (high)\ndoc_date: 2026-11-03 (low)\ncounterparty: CITYLINE TAXIS (high)\namount: 86.5 (high)\ncurrency: AED (high)\nreference: CT-554120 (high)\nWhy: doc_date: low confidence"
+  },
+  "2026-10-14 Brightwater Office Supplies invoice 627.00 GBP.pdf": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "filed",
+      "run_id": "20261106-112740-83ffd7",
+      "content_hash": "md5:232ed062154e2446f81b83217baa9baf",
+      "doc_type": "invoice",
+      "doc_date": "2026-10-14",
+      "period": "2026-10",
+      "year": "2026",
+      "counterparty": "brightwater office supplies",
+      "amount": "627.00",
+      "currency": "GBP",
+      "reference": "BW-2026-0412",
+      "confidence": "high"
+    },
+    "description": "Filed by drive-ai-document-filer on 2026-11-06. Original name: brightwater_invoice.pdf\ndoc_type: invoice (high)\ndoc_date: 2026-10-14 (high)\ncounterparty: Brightwater Office Supplies Ltd (high)\namount: 627.0 (high)\ncurrency: GBP (high)\nreference: BW-2026-0412 (high)"
+  },
+  "2026-10-30 Harborline Print & Sign invoice 539.28 USD.docx": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "filed",
+      "run_id": "20261106-112740-83ffd7",
+      "content_hash": "md5:1280565e26c46b2adc2922115e4a1690",
+      "doc_type": "invoice",
+      "doc_date": "2026-10-30",
+      "period": "2026-10",
+      "year": "2026",
+      "counterparty": "harborline print sign",
+      "amount": "539.28",
+      "currency": "USD",
+      "reference": "HPS-2291",
+      "confidence": "high"
+    },
+    "description": "Filed by drive-ai-document-filer on 2026-11-06. Original name: harborline_print_invoice.docx\ndoc_type: invoice (high)\ndoc_date: 2026-10-30 (high)\ncounterparty: Harborline Print & Sign Co. (high)\namount: 539.28 (high)\ncurrency: USD (high)\nreference: HPS-2291 (high)"
+  },
+  "kestrel_invoice_scanned.pdf": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "unsorted",
+      "run_id": "20261106-112740-83ffd7",
+      "content_hash": "md5:e9a7a281b3d60783919245834ed1bd00",
+      "doc_type": "invoice",
+      "doc_date": "2026-10-03",
+      "period": "2026-10",
+      "year": "2026",
+      "counterparty": "kestrel marine services",
+      "amount": "5145.00",
+      "currency": "USD",
+      "reference": "KMS-88317",
+      "confidence": "low"
+    },
+    "description": "Unsorted by drive-ai-document-filer on 2026-11-06. Original name: kestrel_invoice_scanned.pdf\ndoc_type: invoice (high)\ndoc_date: 2026-10-03 (low)\ncounterparty: KESTREL MARINE SERVICES LLC (high)\namount: 5145.0 (high)\ncurrency: USD (high)\nreference: KMS-88317 (high)\nWhy: doc_date: low confidence"
+  },
+  "2026-10-21 Oakfield Catering invoice 453.60 GBP.xlsx": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "filed",
+      "run_id": "20261106-112740-83ffd7",
+      "content_hash": "md5:c2dfb2be8b6b876f1b4c4cd7adf1e4f0",
+      "doc_type": "invoice",
+      "doc_date": "2026-10-21",
+      "period": "2026-10",
+      "year": "2026",
+      "counterparty": "oakfield catering",
+      "amount": "453.60",
+      "currency": "GBP",
+      "reference": "OC/26/1093",
+      "confidence": "high"
+    },
+    "description": "Filed by drive-ai-document-filer on 2026-11-06. Original name: oakfield_invoice.xlsx\ndoc_type: invoice (high)\ndoc_date: 2026-10-21 (high)\ncounterparty: Oakfield Catering Co. (high)\namount: 453.6 (high)\ncurrency: GBP (high)\nreference: OC/26/1093 (high)"
+  },
+  "old_backup.zip": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "unsorted",
+      "run_id": "20261106-112740-83ffd7"
+    },
+    "description": "Unsorted by drive-ai-document-filer on 2026-11-06. Original name: old_backup.zip\nWhy: file type .zip is not read"
+  },
+  "scan_0012.pdf": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "duplicate",
+      "run_id": "20261106-112740-83ffd7",
+      "content_hash": "md5:232ed062154e2446f81b83217baa9baf",
+      "duplicate_of": "f0005"
+    },
+    "description": "Duplicate by drive-ai-document-filer on 2026-11-06. Original name: scan_0012.pdf\nWhy: same content as 2026-10-14 Brightwater Office Supplies invoice 627.00 GBP.pdf (f0005)"
+  },
+  "2026-10-28 Summit Ridge IT Services invoice 1930.53 USD.pdf": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "filed",
+      "run_id": "20261106-112740-83ffd7",
+      "content_hash": "md5:ae5aeccda13ae69a51952b9ff03d111d",
+      "doc_type": "invoice",
+      "doc_date": "2026-10-28",
+      "period": "2026-10",
+      "year": "2026",
+      "counterparty": "summit ridge it services",
+      "amount": "1930.53",
+      "currency": "USD",
+      "reference": "SR-10482",
+      "confidence": "high"
+    },
+    "description": "Filed by drive-ai-document-filer on 2026-11-06. Original name: summit_it_invoice.pdf\ndoc_type: invoice (high)\ndoc_date: 2026-10-28 (high)\ncounterparty: Summit Ridge IT Services LLC (high)\namount: 1930.53 (high)\ncurrency: USD (high)\nreference: SR-10482 (high)"
+  },
+  "2026-09-01 Northwind Data Services contract": {
+    "appProperties": {
+      "filer": "drive-ai-document-filer",
+      "filer_status": "filed",
+      "run_id": "20261106-112740-83ffd7",
+      "content_hash": "sha256:c86b2fc21d3fb51b7e350663cb769b6ea9efbb38870a1c5582957755ec019fd1",
+      "doc_type": "contract",
+      "doc_date": "2026-09-01",
+      "period": "2026-09",
+      "year": "2026",
+      "counterparty": "northwind data services",
+      "reference": "NW-SA-2026-07",
+      "confidence": "medium"
+    },
+    "description": "Filed by drive-ai-document-filer on 2026-11-06. Original name: Northwind agreement\ndoc_type: contract (high)\ndoc_date: 2026-09-01 (high)\ncounterparty: Northwind Data Services Limited (medium)\nreference: NW-SA-2026-07 (high)"
+  }
+}
