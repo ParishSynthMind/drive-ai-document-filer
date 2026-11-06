@@ -19,7 +19,7 @@ It is built to be safe to point at a real business Drive:
 
 ![A real filing run](media/filing-run.png)
 
-*A real run on 6 November 2026: Claude Sonnet 5.5 reading nine sample files. Google Drive here is the in-memory fake described below, not a live Drive yet (see [Status](#status)).*
+*A real run on 6 November 2026: Claude Sonnet 5.5 reading nine sample files. Google Drive here is the in-memory fake described below; the run on a real Drive is in [the live run](#the-live-run).*
 
 ## How it works
 
