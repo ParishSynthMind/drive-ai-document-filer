@@ -1,4 +1,4 @@
-anthropic>=2.0
+anthropic>=2.0,<3
 google-auth>=2.30
 requests>=2.31
 pdfplumber>=0.11
